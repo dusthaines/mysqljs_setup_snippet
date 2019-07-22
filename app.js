@@ -1,5 +1,8 @@
 // in your application initialization file such as app.js
 
+// 
+// other require items here as well like express maybe?
+// 
 const mysql = require('mysql');
 
 const connection = mysql.createPool({
@@ -23,6 +26,10 @@ connection.on('enqueue', function () {
 });
 
 global.db = connection;
+
+// 
+// other app setup stuff here like app.set, app.engine, app.use, module.exports = app and all that good stuff
+// 
 
 
 // later… 
